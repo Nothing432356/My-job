@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="css/page2.css">
+</head>
+<body>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item nothing">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+    <div class="item">
+        <img src="images/phones.jpg">
+        <h1>Phones</h1>
+        <p>Thiết bị sẽ có ba cấu hình bộ nhớ - RAM 8 GB + bộ nhớ trong 128 GB, RAM 8 GB + bộ nhớ trong 256 GB và RAM 12 GB + bộ nhớ trong 256 GB.</p>
+        <p>456 USD</p>
+    </div>
+
+
+    <div class="fan" id="fan-box"> 
+        <img src="images/fan_blade.jpg">
+    </div>
+    <button type="button" onclick="rotateFan()">ON</button>
+    <button type="button" onclick="stopFan()">OFF</button>
+    <button type="button" onclick="toggleFan()">TOGGLE</button>
+    <script type="text/javascript">
+        var x=10;
+        // alert(x);
+        x=x+20;
+        // alert(x);
+
+        function rotateFan(){
+            var f = document.querySelector("#fan-box");
+            f.classList.add("box-xoay");
+        }
+        function stopFan(){
+            var f = document.querySelector("#fan-box");
+            f.classList.remove("box-xoay");
+        }
+        var isRotating = 0;
+        function toggleFan(){
+            if(isRotating == 0){
+                rotateFan();
+                isRotating = 1;
+            } 
+            else {
+                stopFan();
+                isRotating = 0;
+            }
+        }
+    </script>
+</body>
+</html>

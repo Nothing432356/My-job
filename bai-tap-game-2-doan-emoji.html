@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 2 - Chọn Hộp Quà</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #dff6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .box {
+      width: 500px;
+      padding: 24px;
+      background: white;
+      border: 3px solid #222;
+      border-radius: 8px;
+      box-shadow: 8px 8px 0 #222;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .gifts {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .gift {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #222;
+      border-radius: 8px;
+      background: #ff8fab;
+      font-size: 42px;
+      cursor: pointer;
+    }
+
+    .gift:hover {
+      background: #ffb3c6;
+    }
+
+    .gift:nth-child(1) {
+      background: #ff8fab;
+    }
+
+    .gift:nth-child(1):hover {
+      background: #ffb3c6;
+    }
+
+    .gift:nth-child(2) {
+      background: #ffd166;
+    }
+
+    .gift:nth-child(2):hover {
+      background: #ffe899;
+    }
+
+    .gift:nth-child(3) {
+      background: #95e1d3;
+    }
+
+    .gift:nth-child(3):hover {
+      background: #b8f0e6;
+    }
+
+    .gift:nth-child(4) {
+      background: #c7ceea;
+    }
+
+    .gift:nth-child(4):hover {
+      background: #dfe1f7;
+    }
+
+    #result {
+      min-height: 32px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #again {
+      display: none;
+      padding: 12px 18px;
+      border: 2px solid #222;
+      border-radius: 8px;
+      background: #8de969;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Chọn Hộp Quà</h1>
+    <p>Chọn 1 hộp để xem bên trong có gì.</p>
+
+    <div class="gifts">
+      <button class="gift" onclick="openGift(1)">🎁</button>
+      <button class="gift" onclick="openGift(2)">🎁</button>
+      <button class="gift" onclick="openGift(3)">🎁</button>
+      <button class="gift" onclick="openGift(4)">🎁</button>
+      <button class="gift" onclick="openGift(5)">🎁</button>
+      <button class="gift" onclick="openGift(6)">🎁</button>
+    </div>
+
+    <p id="result">Bạn chưa chọn hộp nào.</p>
+    <button id="again" onclick="resetGame()">Chơi lại</button>
+  </div>
+
+  <script>
+    const gifts = ["🍕", "🎮", "🍪", "🚀"];
+
+    function openGift(number) {
+      const gift = gifts[number - 1];
+      document.getElementById("result").textContent = `Bạn nhận được: ${gift}`;
+      document.getElementById("again").style.display = "inline-block";
+      document.querySelector("h1").textContent = "Mở quà rồi!";
+    }
+
+    function resetGame() {
+      document.getElementById("result").textContent = "Bạn chưa chọn hộp nào.";
+      document.getElementById("again").style.display = "none";
+      document.querySelector("h1").textContent = "Chọn Hộp Quà";
+    }
+
+    /*
+      Bài tập cho học viên:
+      1. Đổi phần quà trong mỗi hộp.
+      2. Đổi màu các hộp quà bằng CSS.
+      3. Khi chọn hộp, đổi tiêu đề h1 thành "Mở quà rồi!".
+      4. Thêm hộp quà thứ 4.
+    */
+  </script>
+</body>
+</html>
