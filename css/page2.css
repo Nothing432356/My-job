@@ -44,11 +44,12 @@ img{
     text-align: center;
     
 }
-.fan img{
+.fan img {
     width: 250px;
     height: auto;
 }
-#fan-box img{
+
+.box-xoay img {
     animation-name: rotate;
     animation-duration: 1s;
     animation-iteration-count: infinite;
